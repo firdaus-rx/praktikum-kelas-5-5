@@ -7,18 +7,30 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">NPM</th>
+                        <th scope="col">JK</th>
+                        <th scope="col">Tgl Lahir</th>
+                        <th scope="col">Alamat</th>
+                        <th scope="col">Created At</th>
                     </tr>
                 </thead>
                 <tbody>
+
+                    @foreach ($mahasiswa as $mhs )                        
+
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>{{ $mhs->id }}</td>
+                        <td>{{ $mhs->nama }}</td>
+                        <td>{{ $mhs->npm}}</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
+
+                    @endforeach
+
                 </tbody>
             </table>
         </div>

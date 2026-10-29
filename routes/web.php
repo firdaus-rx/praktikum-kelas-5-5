@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Mahasiswa;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -7,5 +8,10 @@ Route::get('/', function () {
 });
 
 Route::get('/mahasiswa', function() {
-    return view('pages.mahasiswa');
+
+
+    $mahasiswa = Mahasiswa::query()->get();
+
+
+    return view('pages.mahasiswa', compact('mahasiswa'));
 });
